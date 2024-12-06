@@ -5,8 +5,8 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Cadenas ejercicios = new Cadenas();
-        ejercicios.cadenas();
+        Ventas ejercicios = new Ventas();
+        ejercicios.ventas();
 
         }
     }
