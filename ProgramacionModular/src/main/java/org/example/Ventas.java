@@ -45,7 +45,7 @@ public class Ventas {
         for (int i = 0; i < ventas.length - 1; i++) {
             if (ventas[i] < indiceAuxiliar) {
                 diaVentaMenor = i;
-            } 
+            }
         }
         imprimirResultado(diaVentaMenor);
         return diaVentaMenor;
