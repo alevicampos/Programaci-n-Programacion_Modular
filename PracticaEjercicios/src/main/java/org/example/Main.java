@@ -5,7 +5,8 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        MaximoTresNumeros ejercicios= new MaximoTresNumeros();
-        ejercicios.maximotresnumeros();
+        CampeonatoProgramacion ejercicios= new CampeonatoProgramacion();
+        ejercicios.campeonatoprogramacion();
+
     }
 }
