@@ -4,9 +4,10 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
-        JuegosEnCintas ejercicios = new JuegosEnCintas();
+        JuegosEnCintas ejercicios= new JuegosEnCintas();
         ejercicios.juegosencintas();
+
+
 
         }
     }
