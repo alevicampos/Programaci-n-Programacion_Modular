@@ -14,8 +14,8 @@ class JuegosEnCintasTest {
                 () -> assertTrue(JuegosEnCintas.esPosibleGrabar(new int[]{8}, 8)),
                 () -> assertTrue(JuegosEnCintas.esPosibleGrabar(new int[]{1, 1}, 2)),
                 () -> assertFalse(JuegosEnCintas.esPosibleGrabar(new int[]{10, 10}, 5)),
-                () -> assertTrue(JuegosEnCintas.esPosibleGrabar(new int[]{1_0000_0000, 1_0000_0000}, 1_0000_0000)),
-                () -> assertFalse(JuegosEnCintas.esPosibleGrabar(new int[]{0, 1}, 1)));
+                () -> assertTrue(JuegosEnCintas.esPosibleGrabar(new int[]{100000000, 100000000}, 100000000)),
+                () -> assertFalse(JuegosEnCintas.esPosibleGrabar(new int[]{1, 0}, 1)));
 
     }
 }

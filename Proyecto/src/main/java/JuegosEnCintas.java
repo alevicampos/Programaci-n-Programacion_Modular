@@ -39,13 +39,13 @@ public class JuegosEnCintas {
         while (true) {
             try {
                 tamanoCara = entrada.nextInt();
-                if (tamanoCara < 1 || tamanoCara > 1_0000_0000) {
-                    System.out.println("El tamaño de la cara debe estar entre 1 y 10^8. Inténtelo nuevamente.");
+                if (tamanoCara < 1 || tamanoCara > 100000000) {
+                    System.out.println("El tamaño de la cara debe estar entre 1 y 10^8. Inténtalo de nuevo.");
                     continue;
                 }
                 break;
             } catch (InputMismatchException e) {
-                System.out.println("Entrada no válida. Por favor, introduzca un número entero.");
+                System.out.println("ERROR!. Debes introducir un número entero.");
                 entrada.nextLine(); // Limpiar el búffer
             }
         }
@@ -55,7 +55,7 @@ public class JuegosEnCintas {
             try {
                 numJuegos = entrada.nextInt();
                 if (numJuegos < 1 || numJuegos > 8) {
-                    System.out.println("El número de juegos debe estar entre 1 y 8. Inténtelo de nuevo.");
+                    System.out.println("El número de juegos debe estar entre 1 y 8. Inténtalo de nuevo.");
                     continue;
                 }
                 break;
@@ -75,7 +75,7 @@ public class JuegosEnCintas {
 
                 // Control de formato con matches para asegurarme que el usuario introduce las duraciones de manera correcta.
 
-                if (!duracionesUsuario.matches("(\\d+\\s*){" + numJuegos + "}")) {// el formato lo he mirado en el chatgpt O:)
+                if (!duracionesUsuario.matches("(\\d+\\s*){" + numJuegos + "}")) {
                     System.out.println("Debes introducir " + numJuegos + " duraciones, separadas por espacios. Inténtalo de nuevo.");
                     continue;
                 }
@@ -85,7 +85,7 @@ public class JuegosEnCintas {
                 boolean duracionValida = true;
                 for (int i = 0; i < numJuegos; i++) {
                     duraciones[i] = Integer.parseInt(duracionArray[i]);
-                    if (duraciones[i] < 1 || duraciones[i] > 1_0000_0000) {
+                    if ( duraciones[i] < 1 || duraciones[i] > 100000000) {
                         duracionValida = false;
                     }
                 }
@@ -111,7 +111,7 @@ public class JuegosEnCintas {
 
     /**
      * Método que determina si los juegos pueden ser grabados en las dos caras de la cinta.
-     * @param juegos Arreglo con las duraciones de los juegos.
+     * @param juegos array con las duraciones de los juegos.
      * @param tamanoCara Tamaño máximo de cada cara de la cinta.
      * @return true si es posible grabar los juegos, false en caso contrario.
      */
